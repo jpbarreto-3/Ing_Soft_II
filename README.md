@@ -1,5 +1,3 @@
-Repositorio con contenido de la asignatura Ingeniería de Software II
-
-Universidad Nacional de Colombia 2026-1
+Descripción de STRIDE y diversas maneras de mitigar ataques en cada riesgo que presentan
 
 Juan Pablo Barreto
