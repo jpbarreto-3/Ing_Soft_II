@@ -1,0 +1,270 @@
+{
+  "info": {
+    "_postman_id": "7a241029-69c0-4cc7-8141-b3b5d24327c1",
+    "name": "Tarea API iTunes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23994657"
+  },
+  "item": [
+    {
+      "name": "Trae lista de canciones de Nsqk",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Test 1: Validar que el request fue exitoso\r",
+              "pm.test(\"Status code is 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Test 2: Validar que la respuesta contiene el contador de resultados\r",
+              "pm.test(\"Contiene la propiedad resultCount\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property('resultCount');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://itunes.apple.com/search?term=Nsqk&media=music",
+          "protocol": "https",
+          "host": [
+            "itunes",
+            "apple",
+            "com"
+          ],
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "term",
+              "value": "Nsqk"
+            },
+            {
+              "key": "media",
+              "value": "music"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Trae lista de álbumes de Tainy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Test 1: Validar que el request fue exitoso\r",
+              "pm.test(\"Status code is 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Test 2: Validar que la respuesta contiene el contador de resultados\r",
+              "pm.test(\"Contiene la propiedad resultCount\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property('resultCount');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://itunes.apple.com/search?term=Tainy&entity=album",
+          "protocol": "https",
+          "host": [
+            "itunes",
+            "apple",
+            "com"
+          ],
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "term",
+              "value": "Tainy"
+            },
+            {
+              "key": "entity",
+              "value": "album"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Trae primeros 3 resultados de canciones de Álvaro Diaz",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Test 1: Validar que el request fue exitoso\r",
+              "pm.test(\"Status code is 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Test 2: Validar que la respuesta contiene el contador de resultados\r",
+              "pm.test(\"Contiene la propiedad resultCount\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property('resultCount');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://itunes.apple.com/search?term=Alvaro+Diaz&media=music&limit=3",
+          "protocol": "https",
+          "host": [
+            "itunes",
+            "apple",
+            "com"
+          ],
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "term",
+              "value": "Alvaro+Diaz"
+            },
+            {
+              "key": "media",
+              "value": "music"
+            },
+            {
+              "key": "limit",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Trae exclusivamente videos musicales de José José",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Test 1: Validar que el request fue exitoso\r",
+              "pm.test(\"Status code is 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Test 2: Validar que la respuesta contiene el contador de resultados\r",
+              "pm.test(\"Contiene la propiedad resultCount\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property('resultCount');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://itunes.apple.com/search?term=Jose+Jose&entity=musicVideo",
+          "protocol": "https",
+          "host": [
+            "itunes",
+            "apple",
+            "com"
+          ],
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "term",
+              "value": "Jose+Jose"
+            },
+            {
+              "key": "entity",
+              "value": "musicVideo"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Trae información de Feid",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Test 1: Validar que el request fue exitoso\r",
+              "pm.test(\"Status code is 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Test 2: Validar que la respuesta contiene el contador de resultados\r",
+              "pm.test(\"Contiene la propiedad resultCount\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property('resultCount');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://itunes.apple.com/lookup?id=194502100",
+          "protocol": "https",
+          "host": [
+            "itunes",
+            "apple",
+            "com"
+          ],
+          "path": [
+            "lookup"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "194502100"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
