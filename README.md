@@ -98,11 +98,12 @@ Consumir la API desde otro dispositivo (Máquina Virtual con Kali Linux) simulan
 * El **Reverse Port Forwarding** (Túnel Inverso) toma un puerto de la máquina remota (Kali en este caso, puerto 8080) y redirige todo su tráfico hacia un puerto de la máquina local (Windows, puerto 3000).
 * Esto permite ejecutar peticiones desde Kali hacia `http://localhost:8080` y que estas sean procesadas por la API en Node.js que corre en el host anfitrión.
 
-### Requests realizados
+### Requests realizados (Remotos)
 
 | # | Request | Endpoint | Status Code | Observación |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | Create task | `/tasks` | 201 | Tarea creada remotamente desde Kali a través del túnel |
+| 2 | Update task | `/tasks/:id` | 200 | Actualización de estado desde Kali vía cURL |
 
 ### Resultados
 
